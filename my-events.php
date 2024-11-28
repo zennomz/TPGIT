@@ -61,14 +61,14 @@ unset($pdo);
     <?php include('includes/header.php'); ?>
 
     <div class="container">
-        <h2>Mes événements</h2>
+        <h2>Mes fêtes</h2>
         <div class="event-container">
             <?php if (count($events) > 0) : ?>
                 <?php foreach ($events as $event) : ?>
                     <div class="event">
                         <div>
                             <?php if (!empty($event["image"])) : ?>
-                                <img class="image-rect" src="data:image/jpeg;base64,<?php echo $event["image"]; ?>" alt="Image de l'événement">
+                                <img class="image-rect" src="data:image/jpeg;base64,<?php echo $event["image"]; ?>" alt="Image de la fête">
                             <?php else : ?>
                                 <img src="/images/no-image.jpg" alt="Pas d'image disponible">
                             <?php endif; ?>
@@ -78,12 +78,12 @@ unset($pdo);
 
                         <div class="buttons">
                             <a class="custom_button" href="event-details.php?id=<?php echo $event["id"]; ?>">Détails</a>
-                            <a class="custom_button custom_button_delete" href="my-events.php?delete=<?php echo $event["id"]; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet événement ?');">Supprimer</a>
+                            <a class="custom_button custom_button_delete" href="my-events.php?delete=<?php echo $event["id"]; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette fête ?');">Supprimer</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
             <?php else : ?>
-                <p>Aucun événement à afficher.</p>
+                <p>Aucune fête à afficher.</p>
             <?php endif; ?>
         </div>
     </div>

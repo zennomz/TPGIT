@@ -56,24 +56,24 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
 
 <body>
     <div class="container">
-        <h2>Détails de l'événement<br><?php echo htmlspecialchars($event["title"]); ?></h2>
+        <h2>Détails de la fête<br><?php echo htmlspecialchars($event["title"]); ?></h2>
         <?php if (!empty($event["image"])) : ?>
-            <img class="event_image" src="data:image/jpeg;base64,<?php echo $event["image"]; ?>" alt="Image de l'événement" style="width:100%;height:auto;">
+            <img class="event_image" src="data:image/jpeg;base64,<?php echo $event["image"]; ?>" alt="Image de l'fête" style="width:100%;height:auto;">
         <?php endif; ?>
 
         <div class="author">
             <?php if (!empty($event["user_image"])) : ?>
                 <img src="data:image/jpeg;base64,<?php echo $event["user_image"]; ?>" alt="Image de profil de l'utilisateur" style="width:100px;height:100px;">
             <?php endif; ?>
-            <p>événement de <br><?php echo htmlspecialchars($event["user_pseudo"]); ?></p>
+            <p>Fête de <br><?php echo htmlspecialchars($event["user_pseudo"]); ?></p>
         </div>
 
         <p class="description"><b>Description :</b> <?php echo htmlspecialchars($event["description"]); ?></p>
 
-        <p class="localisation">L'événement a lieu à <b><?php echo htmlspecialchars($event["location"]); ?></b>
+        <p class="localisation">La fête a lieu à <b><?php echo htmlspecialchars($event["location"]); ?></b>
         le <b><?php echo htmlspecialchars($event["event_date"]); ?></b>.</p>
 
-        <p class="type">Il s'agit d'un événement <b><?php echo $event["is_public"] ? 'Public' : 'Privé'; ?></b> !</p>
+        <p class="type">Il s'agit d'une fête <b><?php echo $event["is_public"] ? 'Public' : 'Privé'; ?></b> !</p>
     </div>
 
     <?php include('includes/footer.php'); ?>

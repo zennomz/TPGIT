@@ -28,7 +28,7 @@ unset($pdo);
 
 <head>
     <meta charset="UTF-8">
-    <title>Liste des événements</title>
+    <title>Liste des fêtes</title>
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -50,7 +50,7 @@ unset($pdo);
                                 <h3><?php echo htmlspecialchars($event["title"]); ?></h3>
                                 <div class="image-container">
                                     <?php if (!empty($event["image"])) : ?>
-                                        <img class="image-rect" src="data:image/jpeg;base64,<?php echo $event["image"]; ?>" alt="Image de l'événement">
+                                        <img class="image-rect" src="data:image/jpeg;base64,<?php echo $event["image"]; ?>" alt="Image de la fête">
                                     <?php else : ?>
                                         <img src="/images/no-image.jpg" alt="Pas d'image disponible">
                                     <?php endif; ?>
@@ -64,7 +64,7 @@ unset($pdo);
                     </a>
                 <?php endforeach; ?>
             <?php else : ?>
-                <p>Aucun événement à afficher.</p>
+                <p>Aucune fête à afficher.</p>
             <?php endif; ?>
         </div>
     </div>

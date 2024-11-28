@@ -3,7 +3,7 @@
         <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) : ?>
             <a href="profil.php">Profil</a>
             <a href="my-events.php">Mes fêtes</a>
-            <a href="event-liste.php">Liste des fêtes</a>
+            <a href="event-list.php">Liste des fêtes</a>
             <a href="creation-event.php">Créer une fête</a>
             <a href="logout.php">Déconnexion</a>
         <?php else : ?>

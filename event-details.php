@@ -65,7 +65,7 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
             <?php if (!empty($event["user_image"])) : ?>
                 <img src="data:image/jpeg;base64,<?php echo $event["user_image"]; ?>" alt="Image de profil de l'utilisateur" style="width:100px;height:100px;">
             <?php endif; ?>
-            <p>événement de <br><?php echo htmlspecialchars($event["user_pseud"]); ?></p>
+            <p>événement de <br><?php echo htmlspecialchars($event["user_pseudo"]); ?></p>
         </div>
 
         <p class="description"><b>Description :</b> <?php echo htmlspecialchars($event["description"]); ?></p>
